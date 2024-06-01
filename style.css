@@ -1,22 +1,85 @@
-html,
-body {
-  width: 50%;
-  margin: 0 auto;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
+body {
+  background-image: url(photo-1432847712612-926caafaa802.avif) 
+}
 .container {
-  width: 360px;
+  max-width: 800px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 0px auto;
+  background: #8f9791;
+  border-radius: 30px;
 }
-#InputField {
-  width: 300px;
-  height: 46px;
-  border: 1px solid black;
-  outline: none;
-  vertical-align: middle;
+.container h1 {
+  color: white;
+  font-size: 46px;
+  margin: 20px 0;
 }
-#addToDo {
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
-  font-size: 17px;
+.Todo-Container {
+  display: flex;
+}
+.Todo-Container input {
+  width: 550px;
+  height: 60px;
+  color: white;
+  background: none;
+  border: 2px solid white;
+  border-radius: 13px;
+  padding: 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.Todo-Container input::placeholder,
+input:focus {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.add-btn {
+  width: 100px;
+  color: white;
+  height: 60px;
+  background: none;
+  border: 2px solid white;
+  border-radius: 13px;
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+#todoParent {
+  width: 95%;
+  margin: 20px 0px;
+}
+#todoParent li {
+  border: 3px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 60px;
+  background: none;
+  border: 2px solid white;
+  border-radius: 13px;
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+#todoParent li button {
+  color: white;
+  background: none;
+  border-radius: 13px;
+  padding: 0 15px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
