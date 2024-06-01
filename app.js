@@ -9,11 +9,18 @@ function addTodo() {
   li.innerHTML = todoInput.value;
   var editBtn = document.createElement("button");
   editBtn.setAttribute("onClick", "editTodo(this)");
+  editBtn.style.color = "green" 
   editBtn.innerHTML = "Edit";
+  var compBtn = document.createElement("button");
+  compBtn.setAttribute("onClick", "comTodo(this)");
+  compBtn.style.color = "orange" 
+  compBtn.innerHTML = "Complete";
   var delBtn = document.createElement("button");
+  delBtn.style.color = "red"
   delBtn.innerHTML = "Delete";
   delBtn.setAttribute("onClick", "delTodo(this)");
   li.appendChild(editBtn);
+  li.appendChild(compBtn);
   li.appendChild(delBtn);
   todoParent.appendChild(li);
   todoInput.value = "";
@@ -23,15 +30,15 @@ function delAll() {
   todoParent.innerHTML = "";
 }
 
-function delTodo(ele) {
-  console.log("delTodo", ele.parentNode);
-
-  ele.parentNode.remove();
-}
-
 function editTodo(ele) {
-  var editVal = prompt("Enter value", ele.previousSibling.nodeValue)
-  console.log(editVal)
-  ele.previousSibling.nodeValue = editVal
-
+  var editVal = prompt("Enter value", ele.previousSibling.nodeValue);
+  console.log(editVal);
+  ele.previousSibling.nodeValue = editVal;
+}
+function comTodo(completed) {
+  completed.innerHTML = "Completed";
+  completed.style.color = "blue" 
+}
+function delTodo(ele) {
+  ele.parentNode.remove();
 }

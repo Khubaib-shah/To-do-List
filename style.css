@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 body {
-  background-image: url(photo-1432847712612-926caafaa802.avif) 
+  background-image: url(photo-1432847712612-926caafaa802.avif);
 }
 .container {
   max-width: 800px;
@@ -71,13 +71,14 @@ input:focus {
   border-radius: 13px;
   padding: 0 15px;
   font-weight: bold;
+  border-color: orange;
   font-size: 20px;
   margin: 10px 0px;
 }
 #todoParent li button {
   color: white;
   background: none;
-  border-radius: 13px;
+  font-weight: 300;
   padding: 0 15px;
   border: none;
   font-size: 20px;
