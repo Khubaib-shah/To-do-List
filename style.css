@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 body {
-  background-image: url(photo-1432847712612-926caafaa802.avif);
+  background: #d8efd3;
 }
 .container {
   max-width: 800px;
@@ -14,13 +14,15 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0px auto;
-  background: #8f9791;
+  background: #95d2b3;
+
   border-radius: 30px;
 }
 .container h1 {
   color: white;
   font-size: 46px;
   margin: 20px 0;
+  text-shadow: 3.1px 3.2px 6.2px hsl(0deg 0% 0% / 0.4);
 }
 .Todo-Container {
   display: flex;
@@ -35,12 +37,19 @@ body {
   padding: 0 15px;
   font-size: 20px;
   font-weight: bold;
+  transition: ease 0.5s;
 }
-.Todo-Container input::placeholder,
-input:focus {
+.Todo-Container input::placeholder {
   font-size: 20px;
   font-weight: bold;
   color: white;
+}
+.Todo-Container input:focus {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  background: #55ad9b;
 }
 .add-btn {
   width: 100px;
@@ -54,6 +63,11 @@ input:focus {
   font-size: 20px;
   margin-left: 5px;
   cursor: pointer;
+  transition: ease 0.5s;
+}
+.add-btn:hover,
+input:hover {
+  background: #55ad9b;
 }
 #todoParent {
   width: 95%;
@@ -66,7 +80,7 @@ input:focus {
   align-items: center;
   color: white;
   height: 60px;
-  background: none;
+  background: #55ad9b;
   border: 2px solid white;
   border-radius: 13px;
   padding: 0 15px;
@@ -83,4 +97,13 @@ input:focus {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1.1px 1.2px 2.2px hsl(0deg 0% 0% / 0.47);
+  border-radius: 25px;
+
+  transition: ease 0.2s;
+}
+#todoParent li button:hover {
+  font-size: 22px;
+  text-shadow: 2px 3.1px 3.1px hsl(0deg 0% 0% / 0.42);
 }
